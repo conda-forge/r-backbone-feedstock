@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,30 +10,42 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/backbone_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/backbone/backbone_{{ version }}.tar.gz
-  sha256: 84e5e197bd9c2e09b5c218afa13c7c823f8adf8cc241ad01287fc61828f1ecfa
+  sha256: 873639b83b8274dba6d83ad12030c8955594adbaaa5075aff4de349f3cfab5b0
 
 build:
   merge_build_host: true  # [win]
   number: 0
-  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-mass
     - r-matrix
     - r-poissonbinomial
+    - r-rcpp
     - r-igraph
     - r-network
   run:
     - r-base
+    - {{ native }}gcc-libs         # [win]
+    - r-mass
     - r-matrix
     - r-poissonbinomial
+    - r-rcpp
     - r-igraph
     - r-network
 
