@@ -3,6 +3,7 @@ About r-backbone-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-backbone-feedstock/blob/main/LICENSE.txt)
 
+
 About r-backbone
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://www.zacharyneal.com/backbone, https://github.com/domagal9/backbone
 Package license: GPL-3.0-only
 
 Summary: Provides methods for extracting from a weighted graph a binary or signed backbone that retains only the significant edges. The user may input a weighted graph, or a bipartite graph from which a weighted graph is first constructed via projection. Backbone extraction methods include the stochastic degree sequence model (SDSM; Neal, Z. P. (2014). <doi:10.1016/j.socnet.2014.06.001>), the fixed degree sequence model (FDSM; Zweig, K. A., and Kaufmann, M. (2011). <doi:10.1007/s13278-011-0021-0>), the fixed row model (FRM; Neal, Z. P. (2013). <doi:10.1007/s13278-013-0107-y>), the fixed column model (FCM; Neal, Domagalski, and Sagan (2021). <arXiv:2105.13396>), the fixed fill model (FFM; Neal, Domagalski, and Sagan (2021). <arXiv:2105.13396>), and a universal threshold method.
+
 About r-backbone
 ----------------
 
@@ -24,7 +26,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://app.travis-ci.com/conda-forge/r-backbone-feedstock">
+        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/r-backbone-feedstock/main.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -49,6 +58,34 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12972&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-backbone-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_r_base4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12972&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-backbone-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12972&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-backbone-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_r_base4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12972&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-backbone-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12972&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-backbone-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
