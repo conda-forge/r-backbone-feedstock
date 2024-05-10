@@ -1,4 +1,4 @@
-{% set version = "2.1.3" %}
+{% set version = "2.1.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/backbone_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/backbone/backbone_{{ version }}.tar.gz
-  sha256: 60aa6fe26bc1483c4d2a6f153b876f457a880572e1fb5f17f73b9a12922ee9aa
+  sha256: 94ee771fe09aa0844924cc56bd3c77bdc8c37440cd14fa998505c5efd8486415
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
