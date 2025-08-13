@@ -16,6 +16,11 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
+
 
 requirements:
   build:
@@ -33,20 +38,14 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-mass
     - r-matrix
-    - r-poissonbinomial
     - r-rcpp
     - r-igraph
-    - r-network
   run:
     - r-base
-    - r-mass
     - r-matrix
-    - r-poissonbinomial
     - r-rcpp
     - r-igraph
-    - r-network
 
 test:
   commands:
