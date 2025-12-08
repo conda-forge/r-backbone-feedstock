@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/backbone_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/backbone/backbone_{{ version }}.tar.gz
-  sha256: ba4bcdbec6867a438ac9ad88c929a178805ea25bedb4860e9a72a9a8818a2f27
+  sha256: 7a5c0f198f56b357679eb1ba117598466a4916100b1472f22a7e23fd4c15f15c
 
 build:
   number: 0
