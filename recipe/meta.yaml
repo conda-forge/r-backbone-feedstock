@@ -1,4 +1,4 @@
-{% set version = "3.0.3" %}
+{% set version = "3.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/backbone_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/backbone/backbone_{{ version }}.tar.gz
-  sha256: 7a5c0f198f56b357679eb1ba117598466a4916100b1472f22a7e23fd4c15f15c
+  sha256: abaf5475e19dc1421d5b521544e12b30d14e6ae279f0995a13e4278796f06c00
 
 build:
   number: 0
@@ -54,9 +54,9 @@ test:
 about:
   home: https://www.zacharyneal.com/backbone, https://github.com/domagal9/backbone
   license: GPL-3.0-only
-  summary: Provides methods for extracting from a weighted graph a binary or signed backbone that retains only the significant edges. The user may input a weighted graph, or a bipartite graph from which a weighted graph is first constructed via projection. Backbone extraction methods include the stochastic degree sequence
-    model (SDSM; Neal, Z. P. (2014). <doi:10.1016/j.socnet.2014.06.001>), the fixed degree sequence model (FDSM; Zweig, K. A., and Kaufmann, M. (2011). <doi:10.1007/s13278-011-0021-0>), the fixed row model (FRM; Neal, Z. P. (2013). <doi:10.1007/s13278-013-0107-y>), the fixed column model (FCM; Neal, Domagalski, and Sagan
-    (2021). <arXiv:2105.13396>), the fixed fill model (FFM; Neal, Domagalski, and Sagan (2021). <arXiv:2105.13396>), and a universal threshold method.
+  summary: Provides methods for extracting from a weighted graph a binary or signed backbone that retains only the significant edges. The user may input a weighted graph, or a bipartite graph from which a weighted graph is first constructed via projection. Backbone extraction methods include the stochastic degree 
+    sequence model (SDSM; Neal, Z. P. (2014). <doi:10.1016/j.socnet.2014.06.001>), the fixed degree sequence model (FDSM; Zweig, K. A., and Kaufmann, M. (2011). <doi:10.1007/s13278-011-0021-0>), the fixed row model (FRM; Neal, Z. P. (2013). <doi:10.1007/s13278-013-0107-y>), the fixed column model (FCM; Neal, 
+    Domagalski, and Sagan (2021). <arXiv:2105.13396>), the fixed fill model (FFM; Neal, Domagalski, and Sagan (2021). <arXiv:2105.13396>), and a universal threshold method.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
